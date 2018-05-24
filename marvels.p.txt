@@ -1,0 +1,117 @@
+import random
+captain_america=20
+iron_man=30
+thor=10
+spider_man=15
+hulk=90
+star_lord=35
+drax=25
+
+nebula=50
+black_widow=40
+vision=60
+scarlet_witch=45
+mantis=55
+black_panther=65
+doctor_strange=70
+loki=80
+gamora=25
+powers=[nebula,loki,vision,mantis,scarlet_witch,black_panther,black_widow,captain_america,iron_man]
+
+
+max_power_thanos=150
+print("hii...welome to the game!!")
+print("available powers are")
+print ("\tnebula")
+print("\tdrax")
+print("\tblack_widow")
+print("\thulk")
+print("\tblack_panther")
+print("\tloki")
+print("\tgamora")
+print("\tdoctor_strange")
+print("\tmantis")
+print("\tscarlet_witch")
+print("\tvision")
+print("\tstar_lord")
+print("\tspider_man")
+print("\tiron_man")
+print("\tcaptain_america")
+print("\tthor")
+
+teammate1=powers[random.randrange(len(powers))]
+
+
+print("strength of teammate1 ", teammate1) 
+
+
+teammate2=powers[random.randrange(len(powers))]
+while teammate2==teammate1:
+
+ print("its teammate1")
+ teammate2=powers[random.randrange(len(powers))]
+print("strength of teammate2",teammate2)
+
+
+ 
+
+print("choose teammate3,teammate4")
+print("have good luck ....let's start")
+teammate3=input("teammate3 is")
+while teammate1 == teammate3  or  teammate2 == teammate3:
+  
+ print("its in teammate1 or teammate2..choose other one")
+ teammate3=input("teammate3 is")
+
+ 
+
+ 
+ 
+
+
+teammate4=input("teammate4 is")
+while teammate4==teammate1 or teammate4== teammate2 or teammate4== teammate3:
+ print("its in teammate1 or teammate2 teammate3...choose another one")
+ 
+ teammate4=input("teammate4 is")
+
+
+
+
+ 
+
+
+
+score=((teammate1+teammate2+teammate3+teammate4)-150)
+ 
+
+if teammate1+teammate2+teammate3+teammate4>150:
+ print("won the game!!!...defeted thanos")
+ print("score is ", int((teammate1+teammate2+teammate3+teammate4-150)))
+ if score<10:
+  print("rate is 1")
+ if 10<score<20:
+  print("rate is 2")
+ if 20 <score<30:
+  print("rate is 3")
+ if score>50:
+  print ("rate is 5!!! ")
+  
+  
+if teammate1+teammate2+teammate3+teammate4<150:
+ print("thanos won ....we lost")
+ print("score is ",int((teammate1+teammate2+teammate3+teammate4-150)))
+ 
+ if -20<score<-10:
+  print("rate is .25")
+ if -30<score<-20:
+  print("rate is .025")
+ if score<-50:
+  print("rate is .000025") 
+  
+  
+if teammate1+teammate2+teammate3+teammate4==150:
+ print("we arent dead...even thanos also")
+ print("score is 0")
+ print("rate is 0")
+ 
